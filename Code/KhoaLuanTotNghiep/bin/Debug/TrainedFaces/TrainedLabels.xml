@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Faces_For_Training>
+  <FACE>
+    <NAME>NguyenIT</NAME>
+    <FILE>face_NguyenIT_1306912744.jpg</FILE>
+  </FACE>
+  <FACE>
+    <NAME>PERSON1</NAME>
+    <FILE>face_PERSON1_1339524456.jpg</FILE>
+  </FACE>
+  <FACE>
+    <NAME>PERSON1</NAME>
+    <FILE>face_PERSON1_1850140595.jpg</FILE>
+  </FACE>
+  <FACE>
+    <NAME>PERSON1</NAME>
+    <FILE>face_PERSON1_485120899.jpg</FILE>
+  </FACE>
+  <FACE>
+    <NAME>PERSON1</NAME>
+    <FILE>face_PERSON1_2079947148.jpg</FILE>
+  </FACE>
+</Faces_For_Training>
