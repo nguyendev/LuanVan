@@ -1,0 +1,3 @@
+﻿  Source1.cpp
+d:\github\datn3\api\source1.cpp(33): warning C4101: 'e': unreferenced local variable
+  Api.vcxproj -> D:\GitHub\DATN3\x64\Debug\Api.exe

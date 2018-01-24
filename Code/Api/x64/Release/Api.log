@@ -1,0 +1,10 @@
+﻿  Face.cpp
+  OpenCVApi.cpp
+  Source.cpp
+Source.obj : error LNK2001: unresolved external symbol "public: int __cdecl cv::face::FaceRecognizer::predict(class cv::_InputArray const &)const " (?predict@FaceRecognizer@face@cv@@QEBAHAEBV_InputArray@3@@Z)
+Source.obj : error LNK2001: unresolved external symbol "void __cdecl cv::imshow(class cv::String const &,class cv::_InputArray const &)" (?imshow@cv@@YAXAEBVString@1@AEBV_InputArray@1@@Z)
+Source.obj : error LNK2001: unresolved external symbol "void __cdecl cv::cvtColor(class cv::_InputArray const &,class cv::_OutputArray const &,int,int)" (?cvtColor@cv@@YAXAEBV_InputArray@1@AEBV_OutputArray@1@HH@Z)
+Source.obj : error LNK2001: unresolved external symbol "void __cdecl cv::putText(class cv::_InputOutputArray const &,class cv::String const &,class cv::Point_<int>,int,double,class cv::Scalar_<double>,int,int,bool)" (?putText@cv@@YAXAEBV_InputOutputArray@1@AEBVString@1@V?$Point_@H@1@HNV?$Scalar_@N@1@HH_N@Z)
+Source.obj : error LNK2001: unresolved external symbol "public: void __cdecl cv::CascadeClassifier::detectMultiScale(class cv::_InputArray const &,class std::vector<class cv::Rect_<int>,class std::allocator<class cv::Rect_<int> > > &,double,int,int,class cv::Size_<int>,class cv::Size_<int>)" (?detectMultiScale@CascadeClassifier@cv@@QEAAXAEBV_InputArray@2@AEAV?$vector@V?$Rect_@H@cv@@V?$allocator@V?$Rect_@H@cv@@@std@@@std@@NHHV?$Size_@H@2@2@Z)
+Source.obj : error LNK2001: unresolved external symbol "void __cdecl cv::resize(class cv::_InputArray const &,class cv::_OutputArray const &,class cv::Size_<int>,double,double,int)" (?resize@cv@@YAXAEBV_InputArray@1@AEBV_OutputArray@1@V?$Size_@H@1@NNH@Z)
+D:\GitHub\DATN3\x64\Release\Api.exe : fatal error LNK1120: 6 unresolved externals
