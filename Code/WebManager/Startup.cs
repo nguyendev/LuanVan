@@ -9,9 +9,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using WebManager.Data;
 using WebManager.Models;
 using WebManager.Services;
+using DataAccess;
+using WebManager.Repository;
+using Extension;
+using WebManager.Areas.WebManager.Data;
 
 namespace WebManager
 {
@@ -48,10 +51,13 @@ namespace WebManager
                 .AddDefaultTokenProviders();
 
             services.AddMvc();
+            services.AddSession();
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+            services.AddScoped<IContactRepository, ContactRepository>();
+            services.AddScoped<IMemberRepository, MemberRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -75,12 +81,24 @@ namespace WebManager
 
             app.UseIdentity();
 
+            app.UseCookieAuthentication(new CookieAuthenticationOptions
+            {
+                LoginPath = "/quan-ly-web/dang-nhap",
+                AuthenticationScheme = "Cookies",
+
+                AutomaticAuthenticate = true,
+                AutomaticChallenge = true
+            });
+
             // Add external authentication middleware below. To configure them please see https://go.microsoft.com/fwlink/?LinkID=532715
+            app.UseSession();
 
             app.UseMvc(routes =>
             {
+                routes.MapRoute(name: "areaRoute",  
+                    template: "{area:exists}/{controller=Admin}/{action=Index}");
                 routes.MapRoute(
-                    name: "default",
+                    name: "default", 
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
